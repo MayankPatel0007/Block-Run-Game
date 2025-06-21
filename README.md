@@ -9,6 +9,8 @@ Block Run is a beginner-friendly 2D platformer game built with Unity. This proje
 - 🕹️ Basic player movement (left, right, jump)
 - 🎥 Camera that follows the player smoothly
 - 🌄 Background image setup for a side-scrolling environment
+- 🎢 Dynamic **moving platforms**  
+- 💡 Real-time **lights & shadows** (2D URP)  
 - 🔧 Built using Unity 2D & C#
 
 ---
