@@ -21,6 +21,9 @@ public class MovementController : MonoBehaviour
 
     Vector2 relativeTransform;
 
+    public bool isOnPlatform;
+    public Rigidbody2D platformRb;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +39,17 @@ public class MovementController : MonoBehaviour
         UpdateSpeedMultiplier();
         float targetSpeed = speed * speedMultiplier * relativeTransform.x;
 
-        rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
+        if (isOnPlatform)
+        {
+            rb.linearVelocity = new Vector2(targetSpeed+platformRb.linearVelocity.x, rb.linearVelocity.y);
+        } 
+
+        else
+        {
+            rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
+        }
+        
+        
 
 
 
